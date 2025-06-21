@@ -18,7 +18,7 @@
 ## Methods
 
 ### State Classification
-## 🔧 Features
+## · Features
 - **State Labeling**: Classifies GPS points into:
   - `on-the-move`: regular movement
   - `stopping`: short-duration halts with low ignition ratio and low speed variance
@@ -29,7 +29,7 @@
 - **Visualization**: Plots trajectory points by state on a scatter map
 - **Statistics**: Calculates speed and stop duration summaries for each state
 
-## 📁 Folder Structure
+## · Folder Structure
 
 ```
 
@@ -39,9 +39,9 @@
 ```
 
 
-## 🚀 Usage
+## · Usage
 
-## 📁 Functions Overview
+### · Functions Overview
 
 - `process_all_devices(df)`: batch processing for each vehicle  
 - `label_states_updated(df)`: segment-wise state labeling logic  
@@ -51,7 +51,7 @@
 
 ---
 
-### 🛠 How to Use the Functions
+### · How to Use the Functions
 
 After importing the script or copying the functions into your environment, follow these usage examples:
 
@@ -73,14 +73,14 @@ calculate_state_duration_stats(df_labeled)
 visualize_truck_states_by_index(df_labeled, index=0)
 ```
 
-## 🧩 Future Extensions
+## · Future Extensions
 
 - Heatmap visualization using `folium`  
 - Streamlit dashboard for interactive map and filters  
 - Add clustering or anomaly detection for idling patterns  
 - Integrate warehouse/port POI data for spatial context  
 
-> ⚠️ **Notes**
+> · **Notes**
 >
 > - Input timestamps must be convertible to `datetime` using `pd.to_datetime`
 > - Devices with invalid timestamps will be skipped and logged
