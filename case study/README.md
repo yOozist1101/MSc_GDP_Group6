@@ -7,7 +7,7 @@ A comprehensive package for analyzing vehicle trajectory data, including dwell t
 ```
 project/casestudy
 ├── Data/                           # Input data directory
-│   └──sample_data
+│   └── [sample_data]
 ├── Output/                         # Output directory (auto-created)│ 
 │   ├── dwell_map_per_day.html
 │   └── [various visualization files]
