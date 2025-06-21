@@ -2,8 +2,12 @@
 <h1>Big Data and AI logistics model for First-Last Mile Issues in India </h1>
 </div>
 
+A comprehensive Python framework for analyzing GPS vehicle trajectory data in India.
+
 ## Table of Contents
-- [Background](#Background)
+- [Project Overview](#Project_Overview)
+- [Project Structure](#Project_Structure)
+- [Installation](#Installation)
 - [Data Preprocessing](#data-preprocessing)
 - [Methods](#methods)
    - [State Classification](#state-classification)
@@ -11,7 +15,45 @@
    - [Prediction Model](#prediction-model)
 - [Case Study](#case-study)
 
-## Background
+## Project Overview
+
+This project provides a complete pipeline for GPS vehicle trajectory analysis, including:
+
+- **Data Preprocessing**: GPS data cleaning, POI matching, and trajectory filtering
+- **State Analysis**: Vehicle behavior classification (idling, on-the-move, stopping)
+- **Substate Analysis**: Fine-grained behavior detection (normal driving, congestion, loading/unloading, etc.)
+- **Machine Learning**: Neural network-based state prediction models
+- **Interactive Visualization**: Web-based dashboards and interactive maps
+- **Case Studies**: Real-world traffic analysis applications
+
+## Project Structure
+
+```
+├── README.md                          # Main documentation
+├── requirements.txt                   # Python dependencies
+├── main.py                   # Unified analysis pipeline
+├── utils/                            # Core analysis modules
+│   ├── __init__.py
+│   ├── data_preprocessing.py         # GPS data preprocessing
+│   ├── state.py                      # Vehicle state analysis
+│   ├── substate.py                   # Substate classification
+│   ├── prediction_model.py           # Machine learning models
+│   └── evaluation.py                 # Comprehensive evaluation tools
+├── case study/                       # Specialized analysis applications
+|   ├── README.md                     # case study documentation
+|   ├── ...
+├── Data/                             # Main data directory
+└── Output/                           # Main output directory
+```
+## Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd MSc_GDP_Group6
+
+# Install dependencies
+pip install -r requirements.txt
+```
 
 ## Data Preprocessing
 
