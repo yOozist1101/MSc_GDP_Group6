@@ -1,0 +1,37 @@
+# Streamlit configuration file
+# Save as .streamlit/config.toml
+
+[server]
+# Port to run the app on
+port = 8501
+
+# Whether to enable CORS
+enableCORS = false
+
+# Whether to enable XSS protection
+enableXsrfProtection = false
+
+# Max upload size in MB
+maxUploadSize = 200
+
+[browser]
+# Whether to automatically open browser
+gatherUsageStats = false
+
+[theme]
+# App theme
+primaryColor = "#FF6B6B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+
+[client]
+# Toolbar mode
+toolbarMode = "viewer"
+
+[runner]
+# Whether to allow widgets to request the rerun
+allowRunOnSave = true
+
+# Whether to automatically rerun when file changes
+fastReruns = true
