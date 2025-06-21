@@ -1,6 +1,6 @@
 # Case Study
 
-A comprehensive package for analyzing vehicle trajectory data, including dwell time detection and entry/exit pattern analysis.
+A comprehensive package for analyzing vehicle trajectory data, including dwell time detection and entry/exit pattern analysis in specidic area.
 
 ## Project Structure
 
@@ -14,6 +14,9 @@ project/casestudy
 ├── vehicle_analyzer.py             # Main analysis class
 ├── config.py                       # Configuration parameters
 ├── run_analysis.py                 # Interactive script
+├── streamlit_heatmap_app.py        # Streamlit web dashboard
+├── run_streamlit.bat               # Windows launcher for dashboard
+├── run_streamlit.sh                # Unix/Linux launcher for dashboard
 └── README.md                       # This file
 ```
 
@@ -36,11 +39,22 @@ project/casestudy
 - Analyzes patterns by hour of day and weekday/weekend
 - Generates comprehensive visualizations
 
+### 4. Interactive Web Dashboard
+- Real-time vehicle heatmap visualization using Streamlit
+- Interactive filtering by device ID and time
+- Multiple map layers (heatmap, stay points, trajectories)
+- Color-coded stop duration analysis
+- Manual map center control
+
+
 ## Installation
 
 ### Required Dependencies
 ```bash
 pip install pandas numpy scikit-learn seaborn matplotlib folium geopy
+
+# Additional packages for Streamlit dashboard
+pip install streamlit streamlit-folium branca
 ```
 
 ### Files Needed
@@ -70,3 +84,18 @@ results = analyzer.run_full_analysis(input_file='your_data.csv')
 subset_df = analyzer.preprocess_data()
 dwell_results, pivot_table = analyzer.analyze_dwell_time()
 entry_exit_results = analyzer.analyze_entry
+```
+
+### Interactive Web Dashboard
+```bash
+# Windows
+run_streamlit.bat
+
+# Unix/Linux/MacOS
+chmod +x run_streamlit.sh
+./run_streamlit.sh
+
+# Or manually
+python -m streamlit run streamlit_heatmap_app.py
+```
+This launches a web-based dashboard with interactive filtering and real-time visualization.
