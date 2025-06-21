@@ -61,7 +61,7 @@ from vehicle_analyzer import VehicleAnalyzer
 import config
 
 # Initialize analyzer
-analyzer = VehicleAnalyzer(data_dir='Data', output_dir='Output')
+analyzer = VehicleAnalyzer(data_dir='case study/Data', output_dir='case study/Output')
 
 # Run complete analysis
 results = analyzer.run_full_analysis(input_file='your_data.csv')
