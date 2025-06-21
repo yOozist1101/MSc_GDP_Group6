@@ -51,7 +51,7 @@ PLOT_PARAMS = {
 
 # File names
 FILE_NAMES = {
-    'input': 'cleaned_Kolkta_2_spots.csv',
+    'input': 'sample_data.csv',
     'subset': 'subset_vehicle_tracks.csv',
     'dwell_clusters': 'filtered_dwell_clusters.csv',
     'dwell_pivot': 'dwell_time_by_hour.csv',
