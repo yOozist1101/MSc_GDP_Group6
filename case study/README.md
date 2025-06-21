@@ -1,6 +1,6 @@
 # Case Study
 
-A comprehensive package for analyzing vehicle trajectory data, including dwell time detection and entry/exit pattern analysis in specidic area.
+A comprehensive package for analyzing truck trajectory data, including dwell time detection and entry/exit pattern analysis in specidic area.
 
 ## Project Structure
 
