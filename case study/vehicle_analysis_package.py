@@ -72,7 +72,7 @@ class VehicleAnalyzer:
         # Save results
         output_path = os.path.join(self.output_dir, output_file)
         subset.to_csv(output_path, index=False)
-        print(f"✅ Saved {len(subset):,} rows for {len(target_ids)} vehicles to {output_path}")
+        print(f" Saved {len(subset):,} rows for {len(target_ids)} vehicles to {output_path}")
         
         return subset
     
@@ -119,7 +119,7 @@ class VehicleAnalyzer:
                 results.append(stationary)
         
         if not results:
-            raise ValueError("❌ No stationary clusters found. Please check your data.")
+            raise ValueError(" No stationary clusters found. Please check your data.")
         
         df_clustered = pd.concat(results)
         
@@ -163,7 +163,7 @@ class VehicleAnalyzer:
         # Generate interactive map
         self._create_interactive_map(target_area, map_output)
         
-        print(f"✅ Dwell time analysis completed. Results saved to {self.output_dir}")
+        print(f" Dwell time analysis completed. Results saved to {self.output_dir}")
         
         return target_area, pivot_table
     
@@ -253,7 +253,7 @@ class VehicleAnalyzer:
         # Generate visualizations
         self._create_entry_exit_plots(result_df)
         
-        print(f"✅ Entry/exit analysis completed. Results saved to {output_path}")
+        print(f" Entry/exit analysis completed. Results saved to {output_path}")
         
         return result_df
     
@@ -270,7 +270,7 @@ class VehicleAnalyzer:
         output_path = os.path.join(self.output_dir, filename)
         plt.savefig(output_path)
         plt.close()
-        print(f"✅ Heatmap saved to {output_path}")
+        print(f" Heatmap saved to {output_path}")
     
     def _create_interactive_map(self, target_area, filename):
         """Create interactive map with dwell clusters"""
@@ -328,7 +328,7 @@ class VehicleAnalyzer:
         # Save map
         output_path = os.path.join(self.output_dir, filename)
         m.save(output_path)
-        print(f"✅ Interactive map saved to {output_path}")
+        print(f" Interactive map saved to {output_path}")
     
     def _create_entry_exit_plots(self, result_df):
         """Create entry/exit analysis plots"""
@@ -434,7 +434,7 @@ class VehicleAnalyzer:
         g.savefig(output_path)
         plt.close()
         
-        print(f"✅ Entry/exit plots saved to {self.output_dir}")
+        print(f" Entry/exit plots saved to {self.output_dir}")
     
     def run_full_analysis(self, input_file='cleaned_Kolkta_2_spots.csv'):
         """
