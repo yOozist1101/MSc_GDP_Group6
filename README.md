@@ -41,7 +41,7 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 │   └── evaluation.py                 # Comprehensive evaluation tools
 ├── case study/                       # Specialized analysis applications
 |   ├── README.md                     # case study documentation
-|   ├── ...
+|   └── ...
 ├── Data/                             # Main data directory
 └── Output/                           # Main output directory
 ```
