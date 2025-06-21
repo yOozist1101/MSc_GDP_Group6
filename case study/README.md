@@ -5,7 +5,7 @@ A comprehensive package for analyzing vehicle trajectory data, including dwell t
 ## Project Structure
 
 ```
-project/casestudy
+project/case study
 ├── Data/                           # Input data directory
 │   └── [sample_data]
 ├── Output/                         # Output directory (auto-created)│ 
