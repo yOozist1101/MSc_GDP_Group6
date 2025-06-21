@@ -14,7 +14,7 @@ import os
 
 # Configure Streamlit page
 st.set_page_config(page_title="Vehicle Heatmap Enhanced", layout="wide")
-st.title("🚚 Vehicle Heatmap Dashboard (Enhanced Streamlit Version)")
+st.title(" Vehicle Heatmap Dashboard (Enhanced Streamlit Version)")
 
 # Initialize session state
 if "filters_applied" not in st.session_state:
@@ -24,18 +24,18 @@ if "manual_center" not in st.session_state:
 
 # Data file configuration
 DATA_DIR = "Data"
-CSV_FILE = os.path.join(DATA_DIR, "cleaned_Kolkta_2_spots.csv")
+CSV_FILE = os.path.join(DATA_DIR, "sample_data.csv")
 
 # Check if data file exists
 if not os.path.exists(CSV_FILE):
-    st.error(f"❌ Data file not found: {CSV_FILE}")
+    st.error(f" Data file not found: {CSV_FILE}")
     st.info("Please ensure the data file is in the Data/ directory")
     st.stop()
 
 @st.cache_data
 def load_and_process_data(csv_file):
     """Load and preprocess the GPS data"""
-    progress = st.progress(0, text="🔄 Loading data...")
+    progress = st.progress(0, text=" Loading data...")
     
     usecols = ['deviceId', 'gpsTime', 'latitude', 'longitude', 'deviceSpeed']
     dtype_map = {
@@ -70,10 +70,10 @@ def load_and_process_data(csv_file):
             filtered_chunks.append(chunk)
             total_rows += len(chunk)
         
-        progress.progress(min(40, 10 + i * 5), text=f"📦 Processing chunk {i+1}...")
+        progress.progress(min(40, 10 + i * 5), text=f" Processing chunk {i+1}...")
     
     df = pd.concat(filtered_chunks, ignore_index=True).sort_values(['deviceId', 'gpsTime'])
-    progress.progress(100, text=f"✅ Loaded {total_rows:,} filtered rows.")
+    progress.progress(100, text=f" Loaded {total_rows:,} filtered rows.")
     
     return df
 
@@ -141,7 +141,7 @@ def create_legend():
         border-radius: 5px;
         font-size:14px;
     ">
-    <b>🖍 Legend - Stop Duration</b><br>
+    <b> Legend - Stop Duration</b><br>
     <i style='color:green;'>●</i> ≤30min<br>
     <i style='color:blue;'>●</i> ≤1hr<br>
     <i style='color:yellow;'>●</i> ≤3hr<br>
@@ -166,7 +166,7 @@ def main():
     
     # Sidebar controls
     with st.sidebar:
-        st.header("🎛️ Controls")
+        st.header(" Controls")
         selected_devices = st.multiselect(
             "Select Device ID(s)", 
             ["All"] + device_ids, 
@@ -185,9 +185,9 @@ def main():
         
         col1, col2 = st.columns(2)
         with col1:
-            apply_clicked = st.button("✅ Apply Filters", use_container_width=True)
+            apply_clicked = st.button(" Apply Filters", use_container_width=True)
         with col2:
-            reset_clicked = st.button("🔁 Reset", use_container_width=True)
+            reset_clicked = st.button(" Reset", use_container_width=True)
     
     # Handle button clicks
     if apply_clicked:
@@ -198,7 +198,7 @@ def main():
         st.experimental_rerun()
     
     if not st.session_state["filters_applied"]:
-        st.warning("⏳ Please apply filters to render the map", icon="⏳")
+        st.warning(" Please apply filters to render the map")
         st.info("Use the sidebar controls to select devices and time periods, then click 'Apply Filters'")
         return
     
@@ -210,11 +210,11 @@ def main():
         filtered_df = filtered_df[filtered_df['hour'].isin([int(h) for h in selected_hours])]
     
     if filtered_df.empty:
-        st.error("❌ No data found with the selected filters")
+        st.error(" No data found with the selected filters")
         return
     
     # Process data
-    with st.spinner("🔄 Processing data..."):
+    with st.spinner(" Processing data..."):
         filtered_df = detect_io_patterns(filtered_df)
         stay_summary = detect_stay_points(filtered_df)
     
@@ -230,10 +230,10 @@ def main():
         center_lat = filtered_df['latitude'].mean()
         center_lon = filtered_df['longitude'].mean()
         if st.session_state["manual_center"]:
-            st.warning("⚠️ Invalid center coordinates format. Using data center.")
+            st.warning(" Invalid center coordinates format. Using data center.")
     
     # Create map
-    with st.spinner("🗺️ Creating map..."):
+    with st.spinner(" Creating map..."):
         m = folium.Map(location=[center_lat, center_lon], zoom_start=14)
         
         # Create feature groups for different layers
@@ -285,20 +285,20 @@ def main():
         m.get_root().add_child(legend)
     
     # Display map
-    st.subheader("🗺️ Interactive Vehicle Heatmap")
+    st.subheader(" Interactive Vehicle Heatmap")
     map_data = st_folium(m, width=1100, height=700)
     
     # Display statistics
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.metric("📊 Total Records", f"{len(filtered_df):,}")
+        st.metric(" Total Records", f"{len(filtered_df):,}")
     with col2:
-        st.metric("🚛 Unique Vehicles", len(filtered_df['deviceId'].unique()))
+        st.metric(" Unique Vehicles", len(filtered_df['deviceId'].unique()))
     with col3:
-        st.metric("🛑 Stay Points", len(stay_summary))
+        st.metric(" Stay Points", len(stay_summary))
     with col4:
         avg_speed = filtered_df[filtered_df['deviceSpeed'] > 0]['deviceSpeed'].mean()
-        st.metric("⚡ Avg Speed", f"{avg_speed:.1f} km/h" if not pd.isna(avg_speed) else "N/A")
+        st.metric(" Avg Speed", f"{avg_speed:.1f} km/h" if not pd.isna(avg_speed) else "N/A")
     
     # Additional legend in sidebar
     with st.sidebar:
