@@ -122,6 +122,13 @@ visualize_trajectories(
 
 ## Methods
 
+<div align="center">
+
+  <img src="./assets/4.png" width="75%" alt="Image 4">
+
+</div>
+
+
 ### State Classification
 ### - Features
 - **State Labeling**: Classifies GPS points into:
@@ -355,4 +362,4 @@ print(f"Predicted state: {result['predictions'][0]}")
 
 This case study focuses on **Netaji Subhas Dock**, one of Kolkata's major port facilities, providing comprehensive analysis of truck movement patterns and operational behaviors within the dock area. Our research combines advanced GPS trajectory analysis with real-world validation to understand commercial vehicle operations at this critical transportation hub.
 
-It demonstrates the practical application of our GPS trajectory analysis framework in real-world commercial transportation scenarios, providing actionable insights for operational improvement and strategic planning. For details and code usage, see ```case study/README.md```
+It demonstrates the practical application of our GPS trajectory analysis framework in real-world commercial transportation scenarios, providing actionable insights for operational improvement and strategic planning. For details and code usage, see ```case study/README.md```.
