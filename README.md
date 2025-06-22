@@ -32,6 +32,7 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 ```
 ├── README.md                         # Main documentation
 ├── requirements.txt                  # Python dependencies
+├── .gitignore                        # Git ignore rules and exclusions
 ├── main.py                           # Unified analysis pipeline
 ├── utils/                            # Core analysis modules
 │   ├── __init__.py
