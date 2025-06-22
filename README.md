@@ -25,7 +25,7 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 - **Substate Classification**: Logistics-related state detection combined with POI (congestion, loading/unloading, etc.)
 - **Mechine Learning**: Neural network-based state prediction models (a fast state classification tool)
 - **Interactive Visualization**: Web-based dashboards and interactive maps
-- **Case Studies**: Trajectory analysis application for specific points
+- **Case Study**: Trajectory analysis application for specific points
 
 ## Project Structure
 
@@ -43,6 +43,7 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 ├── case study/                       # Specialized analysis applications
 │   ├── README.md                     # case study documentation
 │   └── ...
+├── assets/                           
 ├── Data/                             # Main data directory
 └── Output/                           # Main output directory
 ```
@@ -345,9 +346,13 @@ print(f"Predicted state: {result['predictions'][0]}")
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 2%;">
 
-  <img src="./assets/1.png" width="50%" alt="Image 1">
+  <img src="./assets/1.png" width="49%" alt="Image 1">
 
-  <img src="./assets/2.png" width="50%" alt="Image 2">
+  <img src="./assets/2.png" width="49%" alt="Image 2">
 
 
 </div>
+
+This case study focuses on **Netaji Subhas Dock**, one of Kolkata's major port facilities, providing comprehensive analysis of truck movement patterns and operational behaviors within the dock area. Our research combines advanced GPS trajectory analysis with real-world validation to understand commercial vehicle operations at this critical transportation hub.
+
+It demonstrates the practical application of our GPS trajectory analysis framework in real-world commercial transportation scenarios, providing actionable insights for operational improvement and strategic planning. For details and code usage, see ```case study/README.md```
