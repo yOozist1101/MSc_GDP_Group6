@@ -41,9 +41,9 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 │   ├── prediction_model.py           # Machine learning models
 │   └── evaluation.py                 # Comprehensive evaluation tools
 ├── case study/                       # Specialized analysis applications
-│   ├── README.md                     # case study documentation
+│   ├── README.md                     # Case study documentation
 │   └── ...
-├── assets/                           
+├── assets/                           # Resource file directory
 ├── Data/                             # Main data directory
 └── Output/                           # Main output directory
 ```
@@ -78,7 +78,7 @@ DEVICE001,1706832003000,22.5456,88.3123,45.2,True,180,3
 #### - Functions Overview
 
 - `concat_files(file_list, output_file)`: merges multiple CSV files with chunked processing
-- `match_trajectories_to_poi(trajectory_file, poi_file, output_file, radius_meters)`: Filter Truck Trajectories Using POI
+- `match_trajectories_to_poi(trajectory_file, poi_file, output_file, radius_meters)`: filter truck trajectories using POI
 - `clean_gps_data(df)`: applies data quality filters and geographic bounds validation
 - `remove_jump_points(group)`: eliminates unrealistic location jumps for each vehicle
 - `process_and_clean_gps(input_file, output_file)`: complete cleaning pipeline with batch processing
