@@ -2,7 +2,7 @@
 <h1>Big Data and AI logistics model for First-Last Mile Issues in India </h1>
 </div>
 
-A comprehensive Python framework for analyzing GPS vehicle trajectory data in India.
+A comprehensive Python framework for analyzing GPS truck trajectory data.
 
 ## Table of Contents
 - [Project Overview](#Project-Overview)
@@ -48,7 +48,7 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 ## Installation
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/yOozist1101/MSc_GDP_Group6.git
 cd MSc_GDP_Group6
 
 # Install dependencies
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 
 ### - Usage
 
-####  Functions Overview
+####  · Functions Overview
 
 - `process_all_devices(df)`: batch processing for each vehicle  
 - `label_states_updated(df)`: segment-wise state labeling logic  
@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 ---
 
-####  How to Use the Functions
+####  · How to Use the Functions
 
 After importing the script or copying the functions into your environment, follow these usage examples:
 
