@@ -342,3 +342,12 @@ print(f"Predicted state: {result['predictions'][0]}")
 > - Predicting substates requires more information from the raw data, such as POI, road conditions, etc.
 
 ## Case Study
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 2%;">
+
+  <img src="./assets/1.png" width="50%" alt="Image 1">
+
+  <img src="./assets/2.png" width="50%" alt="Image 2">
+
+
+</div>
