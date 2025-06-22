@@ -347,7 +347,7 @@ print(f"Predicted state: {result['predictions'][0]}")
 >  **Notes**
 >
 > - Requires labeled training data with `state` column from rule-based classification
-> - Predicting substates requires more information from the raw data, such as POI, road conditions, etc.
+> - Predicting `substate` requires more information from the raw data, such as POI, road conditions, etc.
 
 ## Case Study
 
