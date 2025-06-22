@@ -1,6 +1,10 @@
 # Case Study
+A comprehensive package for analyzing truck trajectory data, including dwell time detection and entry/exit pattern analysis in **Netaji Subhas Dock**. 
+<div align="center">
 
-A comprehensive package for analyzing truck trajectory data, including dwell time detection and entry/exit pattern analysis in specidic area.
+  <img src="./assets/3.JPG" width="70%" alt="Image 3">
+
+</div>
 
 ## Project Structure
 
@@ -11,6 +15,8 @@ project/case study
 ├── Output/                         # Output directory (auto-created)│ 
 │   ├── dwell_map_per_day.html
 │   └── [various visualization files]
+├── assets/
+│   └── [images]
 ├── vehicle_analyzer.py             # Main analysis class
 ├── config.py                       # Configuration parameters
 ├── run_analysis.py                 # Interactive script
@@ -58,7 +64,7 @@ pip install streamlit streamlit-folium branca
 ```
 
 ### Files Needed
-1. Place your GPS data file in the `Data/` directory
+1. Place your GPS data file in the `case study/Data/` directory
 2. Update `config.py` if using different file names or parameters
 
 ## Usage
