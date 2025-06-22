@@ -1,5 +1,7 @@
+<img src="./assets/0.png" width="100%" alt="Image 0">
+
 <div align="center">
-<h1>Big Data and AI logistics model for First-Last Mile Issues in India </h1>
+<h2>Big Data and AI logistics model for First-Last Mile Issues in India </h2>
 </div>
 
 A comprehensive Python framework for analyzing GPS truck trajectory data.
