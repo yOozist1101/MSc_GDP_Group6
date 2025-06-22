@@ -5,8 +5,8 @@
 A comprehensive Python framework for analyzing GPS vehicle trajectory data in India.
 
 ## Table of Contents
-- [Project Overview](#Project_Overview)
-- [Project Structure](#Project_Structure)
+- [Project Overview](#Project-Overview)
+- [Project Structure](#Project-Structure)
 - [Installation](#Installation)
 - [Data Preprocessing](#data-preprocessing)
 - [Methods](#methods)
@@ -20,11 +20,11 @@ A comprehensive Python framework for analyzing GPS vehicle trajectory data in In
 This project provides a complete pipeline for GPS vehicle trajectory analysis, including:
 
 - **Data Preprocessing**: GPS data cleaning, POI matching, and trajectory filtering
-- **State Analysis**: Vehicle behavior classification (idling, on-the-move, stopping)
-- **Substate Analysis**: Fine-grained behavior detection (normal driving, congestion, loading/unloading, etc.)
-- **Machine Learning**: Neural network-based state prediction models
+- **State Classification**: Rule-based truck state classification (idling, on-the-move, stopping)
+- **Substate Classification**: Logistics-related state detection combined with POI (congestion, loading/unloading, etc.)
+- **Mechine Learning**: Neural network-based state prediction models (a fast state classification tool)
 - **Interactive Visualization**: Web-based dashboards and interactive maps
-- **Case Studies**: Real-world traffic analysis applications
+- **Case Studies**: Trajectory analysis application for specific points
 
 ## Project Structure
 
