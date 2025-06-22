@@ -29,9 +29,9 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 ## Project Structure
 
 ```
-├── README.md                          # Main documentation
-├── requirements.txt                   # Python dependencies
-├── main.py                   # Unified analysis pipeline
+├── README.md                         # Main documentation
+├── requirements.txt                  # Python dependencies
+├── main.py                           # Unified analysis pipeline
 ├── utils/                            # Core analysis modules
 │   ├── __init__.py
 │   ├── data_preprocessing.py         # GPS data preprocessing
@@ -40,8 +40,8 @@ This project provides a complete pipeline for GPS vehicle trajectory analysis, i
 │   ├── prediction_model.py           # Machine learning models
 │   └── evaluation.py                 # Comprehensive evaluation tools
 ├── case study/                       # Specialized analysis applications
-|   ├── README.md                     # case study documentation
-|   └── ...
+│   ├── README.md                     # case study documentation
+│   └── ...
 ├── Data/                             # Main data directory
 └── Output/                           # Main output directory
 ```
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ## Methods
 
 ### State Classification
-## · Features
+### - Features
 - **State Labeling**: Classifies GPS points into:
   - `on-the-move`: regular movement
   - `stopping`: short-duration halts with low ignition ratio and low speed variance
@@ -71,19 +71,10 @@ pip install -r requirements.txt
 - **Visualization**: Plots trajectory points by state on a scatter map
 - **Statistics**: Calculates speed and stop duration summaries for each state
 
-## · Folder Structure
 
-```
+### - Usage
 
-├── state_readme.py                     # Main utility script
-├── cleaned_gps_data_Mumbai.csv         # Example input file (optional)
-└── trucks_with_new_states_Mumbai.csv  # Output file after processing
-```
-
-
-## · Usage
-
-### · Functions Overview
+####  Functions Overview
 
 - `process_all_devices(df)`: batch processing for each vehicle  
 - `label_states_updated(df)`: segment-wise state labeling logic  
@@ -93,7 +84,7 @@ pip install -r requirements.txt
 
 ---
 
-### · How to Use the Functions
+####  How to Use the Functions
 
 After importing the script or copying the functions into your environment, follow these usage examples:
 
@@ -115,14 +106,14 @@ calculate_state_duration_stats(df_labeled)
 visualize_truck_states_by_index(df_labeled, index=0)
 ```
 
-## · Future Extensions
+### - Future Extensions
 
 - Heatmap visualization using `folium`  
 - Streamlit dashboard for interactive map and filters  
 - Add clustering or anomaly detection for idling patterns  
 - Integrate warehouse/port POI data for spatial context  
 
-> · **Notes**
+>  **Notes**
 >
 > - Input timestamps must be convertible to `datetime` using `pd.to_datetime`
 > - Devices with invalid timestamps will be skipped and logged
