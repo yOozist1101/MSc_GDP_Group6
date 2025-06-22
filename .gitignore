@@ -1,0 +1,64 @@
+# Data Files - Large GPS datasets
+Data/
+!Data/.gitkeep
+!Data/README.md
+
+# Output Results
+Output/
+!Output/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.env
+
+# Machine Learning Models
+*.pkl
+*.keras
+*.h5
+*.joblib
+
+# Data Files
+*.csv
+*.xlsx
+*.json
+!*sample*.csv
+!*example*.csv
+
+# Log Files
+*.log
+logs/
+
+# Generated Charts and Maps
+*.png
+*.jpg
+*.html
+!assets/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Configuration Files
+.env.local
+config_local.py
+secrets.py
