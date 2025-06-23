@@ -163,7 +163,7 @@ After importing the script or copying the functions into your environment, follo
 
 ```python
 import pandas as pd
-from state_readme import *
+from utils.state import *
 
 # Step 1: Load your GPS data.
 df = pd.read_csv("Data/cleaned_gps_data_Mumbai.csv")
