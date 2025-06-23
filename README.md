@@ -71,6 +71,56 @@ DEVICE001, 1706832003000, 22.5456, 88.3123, 45.2, True, 180, 3
 
 ## Main Usage
 
+### Functions Overview
+
+The `MainPipeline` class provides a complete traffic analysis workflow with the following key functions:
+
+- **`dp()`** - Data preprocessing and cleaning (supports both sample and city-specific data).
+- **`state()`** - Vehicle state classification (idling, on-the-move, stopping).
+- **`substate()`** - Detailed substate classification with POI matching.
+- **`evaluation()`** - Comprehensive analysis including temporal patterns, traffic violations, and visualizations.
+- **`pm()`** - Predictive model training and evaluation.
+- **`runpipeline()`** - Execute the complete analysis pipeline.
+
+### How to Use the Functions
+
+#### Quick Start
+
+Run the complete pipeline with an interactive menu:
+
+```python
+python main.py
+```
+
+#### Programmatic Usage
+
+```python
+from main import MainPipeline
+
+# Initialize pipeline.
+pipeline = MainPipeline()
+
+# Option 1: Run complete pipeline.
+pipeline.runpipeline(city="YourCity")  # For city-specific data
+pipeline.runpipeline()                 # For sample data
+
+# Option 2: Run individual steps.
+# Step 1: Data preprocessing
+results = pipeline.dp(mode="sample")                    # For sample data
+results = pipeline.dp(mode="city", city="YourCity")     # For city data
+
+# Step 2: State classification
+state_file = pipeline.state(results['cleaned_file'], 'YourCity')
+
+# Step 3: Substate analysis
+substate_file = pipeline.substate(state_file, 'YourCity')
+
+# Step 4: Evaluation and visualization
+pipeline.evaluation(substate_file, 'YourCity')
+
+# Step 5: Predictive modeling
+pipeline.pm(state_file, 'YourCity')
+```
 
 ## Data Preprocessing
 
