@@ -1,0 +1,13 @@
+Target,latitude,longitude,type,description,capacity,operating_hours
+Main_Port_Terminal,23.1234,89.5678,port,Primary maritime cargo terminal and container port,Large,24/7
+Central_Logistics_Hub,23.1384,89.5798,logistics_center,Main distribution center for regional cargo operations,Large,06:00-22:00
+Railway_Cargo_Terminal,23.1054,89.59280000000001,railway_terminal,Intermodal railway freight terminal with container handling,Medium,05:00-23:00
+Airport_Cargo_Complex,23.1554,89.5398,airport_cargo,Air freight terminal and cargo processing facility,Medium,24/7
+Industrial_Park_North,23.1484,89.5878,industrial_zone,Manufacturing and industrial complex with heavy vehicle access,Large,06:00-18:00
+Warehouse_District_A,23.1114,89.5528,warehouse_cluster,Major warehousing and cold storage facility cluster,Large,24/7
+Truck_Terminal_East,23.1314,89.6028,truck_terminal,Commercial vehicle terminal with loading docks and parking,Medium,05:00-21:00
+Border_Checkpoint_South,23.0934,89.5728,border_checkpoint,International border crossing for commercial vehicles,Medium,24/7
+Fuel_Depot_Central,23.1284,89.5458,fuel_depot,Commercial fuel depot and truck refueling station,Small,24/7
+Container_Terminal_West,23.1154,89.5378,container_terminal,Inland container depot with rail and road connectivity,Large,24/7
+Highway_Junction_Alpha,23.1434,89.5578,highway_junction,Major highway intersection with truck services,Medium,24/7
+Distribution_Center_Beta,23.0984,89.55980000000001,distribution_center,Regional distribution hub for consumer goods,Medium,07:00-19:00
