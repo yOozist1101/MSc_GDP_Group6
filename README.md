@@ -11,6 +11,7 @@ A comprehensive Python framework for analyzing GPS truck trajectory data.
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Data Format](#data-format)
+- [Main Usage](#main-usage)
 - [Data Preprocessing](#data-preprocessing)
 - [Methods](#methods)
    - [State Classification](#state-classification)
@@ -67,6 +68,9 @@ Your GPS data should include the following columns:
 deviceId, gpsTime, latitude, longitude, deviceSpeed, ignition, orientation, vehicleClass(1-7)
 DEVICE001, 1706832003000, 22.5456, 88.3123, 45.2, True, 180, 3
 ```
+
+## Main Usage
+
 
 ## Data Preprocessing
 
