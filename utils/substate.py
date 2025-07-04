@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 from sklearn.neighbors import BallTree
+import os
+import sys
+from pathlib import Path
 
 def low_speed_threshold(row):
     """
@@ -138,11 +141,6 @@ def substate_duration_time(df):
     
     return df
 
-
-import pandas as pd
-import os
-import sys
-from pathlib import Path
 
 def process_data(df, poi_filepath):
     try:
